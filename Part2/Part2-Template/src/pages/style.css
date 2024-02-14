@@ -1,0 +1,136 @@
+/* 
+  Some terminology to help you get started:
+  - * is a universal selector, meaning it selects all elements
+  - :root selects the root (or <html>) element
+  - ::-webkit-scrollbar styles the scrollbar so it doesn't rely on the user's OS
+  - ::-webkit-scrollbar-track styles the track (background) of the scrollbar
+  - ::-webkit-scrollbar-thumb styles the thumb (moving part) of the scrollbar
+  - body styles the body element, which contains all content on a page
+  - All other selectors should be self-explanatory or easy to Google
+*/
+
+/* Use * to set default values you want for every object. */
+* {
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Use :root to define variables you want to use across the app.
+  - Have multiple font families? Define them here.
+  - Define a color palette here so you don't have to change every instance of a color.
+  - Choose heights, widths, and other measurements here so you can easily change them later.
+*/
+:root {
+  --color-darkest: #000;
+  --color-dark: #111;
+  --color-darkish: #222;
+  --color-light: #eee;
+  --color-lightest: #fff;
+
+  --color-primary: #2b7de1;
+  --color-primary-dark: #1f71d6;
+
+  --page-width: 1280px;
+  --page-padding: 4rem;
+
+  --font-sans: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-darkest);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+  border: 4px solid transparent;
+  border-radius: 100vw;
+  background-clip: content-box;
+}
+
+/*
+  Set the background color to be dark and the text color to be light.
+  Set the max-width to be the page width and center the content.
+  Add padding so the content isn't on the edge of the page.
+*/
+body {
+  background-color: var(--color-dark);
+  color: var(--color-lightest);
+  overflow-x: hidden;
+
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: var(--page-padding);
+}
+
+/*
+  Theming, change to your preference.
+*/
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 1.2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-lightest);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5em;
+  margin-top: 8px;
+  color: var(--color-light);
+}
+
+sup {
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
