@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 // Styles for different types of content in the blog post
 // WARNING: I highly recommend leaving this as-is unless you want to customize how your blog posts look specifically
@@ -76,6 +76,24 @@ export const ContentStyle = styled.div`
     background-color: var(--color-darkest);
     padding: 0.25rem;
     border-radius: 4px;
+  }
+  .comment-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .comment {
+    background-color: var(--color-darkish);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  .warning {
+    border-radius: 8px;
+    background-color: #e84141;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
   }
 `;
 
