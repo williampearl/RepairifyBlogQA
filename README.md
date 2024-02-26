@@ -11,10 +11,7 @@ You can open _Part2_ to find our _Part2-Complete_ which contains all the files y
 
 `cd` into whichever project you are using. For example, `cd Part2-Complete`. Run `npm i --force` to install the required npm packages (You will probably see warnings, its OK). Once everything is installed you can start Gatsby with `npm run develop`. You can find the URL in the console output, but it's probably http://localhost:9000/.
 
-## Installing Playwright
+## Using Playwright
 
-1. `npm init playwright@latest --force`
-2. Use all defaults. The options I used where 'JavaScript', 'tests', false,
-   true
-3. `npx playwright test --ui --project chromium` to run an interactive test executor
-4. `npx playwright --ui --project chromium` to build a test step-by-step
+1. `npx playwright test --ui --project chromium` to run an interactive test executor
+2. `npx playwright --ui --project chromium` to build a test step-by-step
